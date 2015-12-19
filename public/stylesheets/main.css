@@ -1,0 +1,142 @@
+/**
+* RESETS
+*/
+
+img, a, input, input:active {
+    border: none;
+    outline: none;
+}
+
+/**
+* ELEMENT STYLES DERIVED FROM SKETCH
+*/
+
+.profile img {
+    background: rgba(74,73,74,0.20);
+    border: 6px solid #FFFFFF;
+}
+/* shutterstock_144436825: */
+
+
+/* Rectangle 2 Copy 18: */
+form input .container {
+    border: 2px solid #4A90E2;
+    border-radius: 4px;
+}
+
+/* Line: */
+form input .line {
+    opacity: 0.3;
+    border: 1px solid #979797;
+}
+
+
+/* Enter your phone num: */
+form input {
+    font-family: AvenirNext-Regular;
+    font-size: 18px;
+    color: #9B9B9B;
+    line-height: 25px;
+}
+
+/**
+* LAYOUT
+*/
+body {
+    font-family: AvenirNext-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    background: white;
+
+    width: 400px;
+    position: relative;
+
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container {
+    min-height: 480px;
+}
+
+#container #profile {
+    margin-top:90px;
+    min-height:400px;
+}
+
+#container #profile h4 {
+    font-family: AvenirNext-Regular;
+    font-size: 12px;
+    color: #9B9B9B;
+    letter-spacing: 3.42px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1;
+}
+
+#container #profile h1 {
+    font-family: AvenirNext-Regular;
+    font-size: 48px;
+    color: #000000;
+    line-height: 66px;
+    font-weight: normal;
+    padding:0;
+    margin:0;
+    line-height: 0.7;
+}
+
+#container #profile > img {
+    height: 180px;
+    width: auto;
+    border: none;
+    outline: none;
+}
+
+#container form {
+    margin-top: 40px;
+}
+
+#container form .container {
+    border: 2px solid #4A90E2;
+    border-radius: 4px;
+}
+
+#container form .container input {
+    padding: 10px 0 10px 10px;
+
+    overflow: auto;
+    width: 320px;
+    height: 56px;
+
+    font-family: AvenirNext-Regular;
+    font-size: 18px;
+    color: #9B9B9B;
+    line-height: 25px;
+
+    border-left: 1px solid #e7e7e7;
+}
+
+#container form .container .country {
+    display: inline-block;
+    margin-top:15px;
+    width: 70px;
+    float: left;
+
+    font-family: AvenirNext-Regular;
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+#container form .container .country img {
+    vertical-align: middle;
+}
+
+#footer {
+    /*position:absolute;
+    bottom:40px;
+    left: 50%;
+    transform: translateX(-50%);*/
+
+}
+
