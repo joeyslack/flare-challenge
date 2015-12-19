@@ -1,0 +1,8 @@
+{
+  "name": "Flare Challenge",
+  "description": "Flare challenge for invite onboarding",
+  "repository": "https://github.com/joeyslack/flare-challenge.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static", "flare"],
+  "image": "heroku/nodejs"
+}
