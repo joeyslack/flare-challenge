@@ -36,9 +36,13 @@ app.get('/', function(req, res) {
 * @param   user  The user id of the inviter
 * @param   phone The phone number of the invitee
 */
-app.get('/invite/:user/:phone', function (req, res) {
+/*app.get('/invite/:user/:phone', function (req, res) {
     res.end("TEST");
+});*/
+app.get('/invite/:branch_match_id', function (req, res) {
+    res.end('yo ' + req.params.branch_match_id);
 });
+
 
 /**
 * Retrieve a referral code and retrieve & render the inviter's profile
