@@ -39,8 +39,9 @@ app.get('/', function(req, res) {
 /*app.get('/invite/:user/:phone', function (req, res) {
     res.end("TEST");
 });*/
-app.get('/invite/:branch_match_id', function (req, res) {
-    res.end('yo ' + req.params.branch_match_id);
+app.get('/invite', function (req, res) {
+    res.end('yo ' + req.query._branch_match_id);
+    console.log(req.query);
 });
 
 
