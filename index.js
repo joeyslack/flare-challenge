@@ -85,10 +85,25 @@ app.get('/invite/:user/:phone', function (req, res) {
 
                 // Add to invites db record for our own recordkeeping & linking
                 var insert = query('insert into invites (user_id, code, telephone) VALUES ($1, $2, $3) returning id', [user.id, b.url, req.params.phone], function() {
-
                     // Output json of share code
                     response.writeHead(200, {"Content-Type": "application/json"});
                     response.end(body);
+                });
+
+                // Twilio Credentials
+                var accountSid = config().twilio_sid;
+                var authToken = config().twilio_token;
+
+                //require the Twilio module and create a REST client
+                var client = require('twilio')(accountSid, authToken);
+
+                client.messages.create({
+                    to: "+" + req.params.phone.length == 10 ? "1" + req.params.phone : req.params.phone,
+                    from: "+16504698850",
+                    body: "Yo! You're invited to Flare. Complete your registration now " + b.url,
+                    mediaUrl: "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",
+                }, function(err, message) {
+                    console.log(message.sid);
                 });
             }
             else {
@@ -107,8 +122,6 @@ app.get('/invite/:user/:phone', function (req, res) {
 */
 app.get('/signup', function (req, res) {
     // Render signup page. Signup has client side connecting handler for Branch.io object
-    //console.log(JSON.stringify(req));
-
     res.render('pages/signup', {
         config: config(),
         _branch_match_id: req.query._branch_match_id
