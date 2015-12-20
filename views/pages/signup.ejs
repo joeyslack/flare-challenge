@@ -53,7 +53,7 @@
                         console.log(data.data_parsed);
 
                         console.log("----");
-                        console.log(Object.keys(data.data_parsed));
+                        console.log(Object.keys(data.data_parsed)["name"]);
                         // Got expected data. Do stuff
                         if (data.data_parsed && Object.keys(data.data_parsed)['name']) {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Referred By";
