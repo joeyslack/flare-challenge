@@ -40,10 +40,12 @@ form input {
 /**
 * LAYOUT
 */
+html, body {
+    background: white;
+}
 body {
     font-family: AvenirNext-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
-    background: white;
 
     width: 400px;
     position: relative;
