@@ -52,10 +52,8 @@
                         console.log("Branch campaign data:");
                         console.log(data.data_parsed);
 
-                        console.log("----");
-                        console.log(Object.keys(data.data_parsed).name);
                         // Got expected data. Do stuff
-                        if (data.data_parsed && Object.keys(data.data_parsed)['name']) {
+                        if (data.data_parsed && data.data_parsed.name != undefined) {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Referred By";
                             document.getElementsByClassName("js-referrer-name")[0].innerHTML = data.data_parsed.name;
                             document.getElementsByClassName("js-action")[0].style.display = "block";
