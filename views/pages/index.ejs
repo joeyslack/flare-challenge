@@ -4,12 +4,27 @@
     <body>
         <div id="container">
             <div id="profile">
-                <h4>Welcome. You can't do anything here</h4>
+                <img src="/no-user-image.gif" alt="" />
+
+                <h4>Referred By</h4>
+                <h1>Jane Bear</h1>
+
+                <form>
+                    <div class="container">
+                        <div class="country"><img src="/flag.png" height="28" width="40px" />+1</div>
+                        <input type="tel" name="tel" required pattern="[0-9]{3}-{0,1}[0-9]{3}-{0,1}[0-9]{4}" maxlength="10" placeholder="Enter your phone number" />
+                    </div>
+                </form>
             </div>
+
+
+
         </div>
 
         <div id="footer">
-            <a href="<%= config.site %>"><img src="/logo.png" alt="Flare" height="48" /></a>
-        </div>
+                <a href="<%= config.site %>"><img src="/logo.png" alt="Flare" height="48" /></a>
+            </div>
+
+
     </body>
 </html>

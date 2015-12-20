@@ -12,7 +12,7 @@
                 <form method="GET" id="signup">
                     <div class="container js-action" style="display:none;">
                         <div class="country"><img src="/flag.png" height="28" width="40px" />+1</div>
-                        <input type="tel" name="tel" required pattern="[0-9]{3}-{0,1}[0-9]{3}-{0,1}[0-9]{4}" placeholder="Enter your phone number" />
+                        <input type="tel" name="tel" required pattern="[0-9]{3}-{0,1}[0-9]{3}-{0,1}[0-9]{4}" maxlength="10" placeholder="Enter your phone number" />
                     </div>
                 </form>
             </div>
@@ -36,13 +36,6 @@
                         alert("Disable your adblocker. Branch.io blocked pretty hard :-/");
                     }
                     else {
-
-                        /*branch.first(function(one, two) {
-                            console.log("WHAT");
-                            console.log(one);
-                            console.log(two);
-                        });*/
-
                         var invalidReferral = function() {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Invalid referral code";
                             document.getElementsByClassName("js-referrer-name")[0].innerHTML = "Sorry";
