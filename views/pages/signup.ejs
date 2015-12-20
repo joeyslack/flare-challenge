@@ -36,6 +36,13 @@
                         alert("Disable your adblocker. Branch.io blocked pretty hard :-/");
                     }
                     else {
+
+                        /*branch.first(function(one, two) {
+                            console.log("WHAT");
+                            console.log(one);
+                            console.log(two);
+                        });*/
+
                         var invalidReferral = function() {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Invalid referral code";
                             document.getElementsByClassName("js-referrer-name")[0].innerHTML = "Sorry";
@@ -46,7 +53,7 @@
                         console.log(data.data_parsed);
 
                         // Got expected data. Do stuff
-                        if (data.data_parsed && Object.keys(data.data_parsed).length > 6) {
+                        if (data.data_parsed && Object.keys(data.data_parsed)['name']) {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Referred By";
                             document.getElementsByClassName("js-referrer-name")[0].innerHTML = data.data_parsed.name;
                             document.getElementsByClassName("js-action")[0].style.display = "block";
