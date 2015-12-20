@@ -62,8 +62,8 @@ app.get('/invite/:user/:phone', function (req, res) {
                 user_id: user.id,
                 image: user.image,
                 telephone: req.params.phone,
-                $deeplink_path: 'signup/',
-                $desktop_url: config().service_path + 'signup/'
+                $deeplink_path: 'signup',
+                $desktop_url: config().service_path + 'signup'
             }
         }
 
