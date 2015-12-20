@@ -57,13 +57,10 @@ body {
 
 #container {
     min-height: 400px;
-
-    border:thin solid red;
 }
 
 #container #profile {
     margin-top:70px;
-    border:thin solid blue;
 }
 
 #container #profile h4 {
