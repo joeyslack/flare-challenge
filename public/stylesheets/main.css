@@ -1,3 +1,7 @@
+/******
+* TODO: Minify this for production...
+******/
+
 /**
 * RESETS
 */
@@ -15,23 +19,17 @@ img, a, input, input:active {
     background: rgba(74,73,74,0.20);
     border: 6px solid #FFFFFF;
 }
-/* shutterstock_144436825: */
 
-
-/* Rectangle 2 Copy 18: */
 form input .container {
     border: 2px solid #4A90E2;
     border-radius: 4px;
 }
 
-/* Line: */
 form input .line {
     opacity: 0.3;
     border: 1px solid #979797;
 }
 
-
-/* Enter your phone num: */
 form input {
     font-family: AvenirNext-Regular;
     font-size: 18px;
@@ -93,6 +91,7 @@ body {
     outline: none;
 }
 
+
 #container form {
     margin-top: 40px;
 }
@@ -100,14 +99,26 @@ body {
 #container form .container {
     border: 2px solid #4A90E2;
     border-radius: 4px;
+    max-width: 480px;
+    height: 56px;
+    overflow: hidden;
+}
+#container form .container h5 {
+    margin-top: 16px;
+    font-family: AvenirNext-Regular;
+    font-weight: normal;
+    font-size: 18px;
+    color: #9B9B9B;
+    line-height: 25px;
 }
 
 #container form .container input {
     padding: 10px 0 10px 10px;
+    margin: 0;
 
     overflow: auto;
-    width: 320px;
     height: 56px;
+    width: 326px;
 
     font-family: AvenirNext-Regular;
     font-size: 18px;
@@ -115,6 +126,27 @@ body {
     line-height: 25px;
 
     border-left: 1px solid #e7e7e7;
+    background:none;
+}
+
+.error, #container form .container input.error {
+    background: #ff7f7f;
+
+    -webkit-animation:fadeInOutError ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeInOutError ease-in 1;
+    animation:fadeInOutError ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.success, #container form .container input.success {
+    background: #cbffde;
 }
 
 #container form .container .country {
@@ -132,11 +164,32 @@ body {
     vertical-align: middle;
 }
 
-#footer {
-    /*position:absolute;
-    bottom:40px;
-    left: 50%;
-    transform: translateX(-50%);*/
-
+.fadeInOut {
+    opacity: 0;  /* make things invisible upon start */
 }
 
+.fadeIn {
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeInOutError { 0% { background: inherit; } 25% { background: #ff7f7f;} 100% { background: none; } }
+@-moz-keyframes fadeInOutError { 0% { background: inherit; } 25% { background: #ff7f7f} 100% { background: none; } }
+@keyframes fadeInOutError { 0% { background: inherit; } 25% { background: #ff7f7f;} 100% { background: none; } }
+
+@-webkit-keyframes fadeInOutSuccess { 0% { background: inherit; } 25% { background: #cbffde;} 100% { background: none; } }
+@-moz-keyframes fadeInOutSuccess { 0% { background: inherit; } 25% { background: #cbffde} 100% { background: none; } }
+@keyframes fadeInOutSuccess { 0% { background: inherit; } 25% { background: #cbffde;} 100% { background: none; } }
