@@ -12,7 +12,7 @@ Based on the provided [Challenge Instructions](CHALLENGE.md), the included files
 This project uses native css & javascript on the client side, and nodejs w/ express, postgres and request on the server side. 3rd party integration with Branch.io (https://dev.branch.io/) for referral link generation and twilio (https://www.twilio.com) for sms messaging.
 
 Appflow goes something like this:
-* Request invite on endpoint (https://boiling-gorge-3368.herokuapp.com/invite/1/PHONE_NUMBER_GOES_HERE). This fetches user_id of 1 from the database, and stores the user data in branch.io, associated with the phone number provided.
+* Request invite on endpoint (https://boiling-gorge-3368.herokuapp.com/invite/1/PHONE_NUMBER_GOES_HERE). This fetches user_id of 1 from the database, and stores the user data in branch.io, associated with the phone number provided. In this current version of the DB, we only have 1 registered user, that's user id 1 = Jane Bear. We can easily add more with their associated data/phone/image.
 * Connect to twilio and send message to user with referral link included
 * Client clicks on referral link, and is requested to enter phone number. If phone number matches what was on record for the original request, we succeed.
 
