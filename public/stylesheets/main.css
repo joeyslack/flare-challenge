@@ -47,7 +47,7 @@ body {
     font-family: AvenirNext-Regular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
 
-    width: 400px;
+    width: 310px;
     position: relative;
 
     padding: 0 20px 0 20px;
@@ -101,10 +101,8 @@ body {
 #container form .container {
     border: 2px solid #4A90E2;
     border-radius: 4px;
-    max-width: 480px;
     height: 56px;
-    overflow: hidden;
-}
+]}
 #container form .container h5 {
     margin-top: 16px;
     font-family: AvenirNext-Regular;
@@ -120,7 +118,7 @@ body {
 
     overflow: auto;
     height: 56px;
-    width: 326px;
+    width: 236px;
 
     font-family: AvenirNext-Regular;
     font-size: 18px;
