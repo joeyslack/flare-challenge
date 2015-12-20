@@ -17,6 +17,7 @@ Appflow goes something like this:
 * Client clicks on referral link, and is requested to enter phone number. If phone number matches what was on record for the original request, we succeed.
 
 **Notes**
+
 Branch actually supports SMS messenging, so it's duplicate work to have both Branch and Twilio. Just a fun thing to have both I guess.
 
 
