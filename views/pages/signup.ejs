@@ -46,7 +46,7 @@
                         console.log(data.data_parsed);
 
                         // Got expected data. Do stuff
-                        if (data.data_parsed && Object.keys(data.data_parsed).length > 4) {
+                        if (data.data_parsed && Object.keys(data.data_parsed).length > 6) {
                             document.getElementsByClassName("js-referrer-verb")[0].innerHTML = "Referred By";
                             document.getElementsByClassName("js-referrer-name")[0].innerHTML = data.data_parsed.name;
                             document.getElementsByClassName("js-action")[0].style.display = "block";
@@ -87,7 +87,6 @@
                                     }
                                 }, true);
                             }
-
                         }
                         else {
                             invalidReferral();
@@ -95,7 +94,6 @@
                     }
                 });
             });
-
         </script>
     </body>
 </html>
