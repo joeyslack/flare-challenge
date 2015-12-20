@@ -11,6 +11,11 @@ img, a, input, input:active {
     outline: none;
 }
 
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 /**
 * ELEMENT STYLES DERIVED FROM SKETCH
 */
