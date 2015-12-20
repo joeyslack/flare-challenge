@@ -56,6 +56,7 @@ app.get('/invite/:user/:phone', function (req, res) {
             "campaign":"flare_signups",
             "channel":"webapp",
             "data": {
+                date: Date(),
                 name: user.name,
                 email: user.email,
                 user_id: user.id,
@@ -106,6 +107,8 @@ app.get('/invite/:user/:phone', function (req, res) {
 */
 app.get('/signup', function (req, res) {
     // Render signup page. Signup has client side connecting handler for Branch.io object
+    //console.log(JSON.stringify(req));
+
     res.render('pages/signup', {
         config: config(),
         _branch_match_id: req.query._branch_match_id
